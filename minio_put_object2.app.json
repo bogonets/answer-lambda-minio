@@ -1,0 +1,141 @@
+{
+    "info": {
+        "name": "minio_put_object2",
+        "version": "1.0.0",
+        "category": "minio",
+        "keywords": [
+            "minio"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "zer0",
+        "dependencies": [
+            {
+                "type": "pip",
+                "src": "numpy"
+            },
+            {
+                "type": "pip",
+                "src": "minio"
+            }
+        ],
+        "engines": ">=1.0.2",
+        "environment": {
+            "type": "pyenv",
+            "name": "minio"
+        },
+        "titles": {
+            "en": "Put object",
+            "ko": "Put object"
+        },
+        "descriptions": {
+            "en": "Add a new object to the object storage server.",
+            "ko": "오브젝트 스토리지 서버에 새로운 오브젝트를 추가한다."
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": [
+            {
+                "name": "bucket_name",
+                "mime": "text/plain"
+            },
+            {
+                "name": "object_name",
+                "mime": "text/plain"
+            },
+            {
+                "name": "data"
+            }
+        ]
+    },
+    "props": [
+        {
+            "rule": "initialize_only",
+            "name": "endpoint",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "URL",
+                "ko": "URL"
+            },
+            "help": {
+                "en": "URL to object storage service.",
+                "ko": "오브젝트 스토리지 서버의 주소."
+            }
+        },
+        {
+            "rule": "initialize_only",
+            "name": "access_key",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Access KEY",
+                "ko": "Access KEY"
+            },
+            "help": {
+                "en": "Access key is like user ID that uniquely identifies your account.",
+                "ko": "액세스 키는 계정을 고유하게 식별하는 사용자 ID와 같습니다."
+            }
+        },
+        {
+            "rule": "initialize_only",
+            "name": "secret_key",
+            "default_value": "",
+            "type": "str",
+            "required": true,
+            "valid": {
+                "password": true
+            },
+            "title": {
+                "en": "Secret KEY",
+                "ko": "Secret KEY"
+            },
+            "help": {
+                "en": "Secret key is the password to your account.",
+                "ko": "비밀 키는 계정의 비밀번호입니다."
+            }
+        },
+        {
+            "rule": "initialize_only",
+            "name": "secure",
+            "default_value": "false",
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Secure",
+                "ko": "Secure"
+            },
+            "help": {
+                "en": "Set this value to 'True' to enable secure (HTTPS) access.",
+                "ko": "'True'로 선택할 경우 HTTPS 보안 접속을 적용한다."
+            }
+        },
+        {
+            "rule": "initialize_only",
+            "name": "extension",
+            "default_value": ".txt",
+            "type": "str",
+            "required": true,
+            "valid": {
+                "list": ".txt;.css;.csv;.htm or .html;.js;.bmp;.gif;.jpg or .jpeg;.png;.tif or .tiff;.mp3;.wav;.avi;.mpeg;.ts;.bin;.doc;.docx;.jar;.json;.pdf;.php;.ppt;.pptx;.xls;.xml;.zip;"
+            },
+            "title": {
+                "en": "extension",
+                "ko": "확장자"
+            },
+            "help": {
+                "en": "Set extension",
+                "ko": "확장자 타입을 설정한다."
+            }
+        }
+    ]
+}
