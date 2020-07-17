@@ -26,8 +26,8 @@
             "name": "minio"
         },
         "titles": {
-            "en": "Put object",
-            "ko": "Put object"
+            "en": "Put object2",
+            "ko": "Put object2"
         },
         "descriptions": {
             "en": "Add a new object to the object storage server.",
